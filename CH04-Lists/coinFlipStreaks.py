@@ -28,3 +28,30 @@ Some knowledge of mathematics could give you the exact answer and save
 you the trouble of writing a program, but programmers are notoriously
 bad at math.
 '''
+
+import random
+numberOfStreaks = 0
+
+for experimentNumber in range(10000):
+    # Code that creates a list of 100 'heads' or 'tails' values.
+    coinFlipList = []
+    for i in range(100):
+        coinFlipList.append(random.randint(0, 1))
+    
+    # Code that checks if there's a streak of 6 heads or tails in a row. 
+    currentSide = coinFlipList[0]
+    count = 1
+    for side in coinFlipList:
+        if side == currentSide:
+            count += 1
+            if count == 6:
+                numberOfStreaks += 1
+                break
+        else: 
+            currentSide = side
+            count = 1
+    # print(coinFlipList)
+    # print('Experiment: ' + str(experimentNumber) + ', Num Streaks: ' + str(numberOfStreaks))
+print('Chance of streak: %s%%' % (numberOfStreaks / 100))
+    
+

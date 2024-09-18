@@ -7,3 +7,16 @@ For example, passing the previous spam list to the function would return 'apples
 But your function should be able to work with any list value passed to it. 
 Be sure to test the case where an empty list [] is passed to your function.
 '''
+
+def listToString(list):
+    for i in range(len(list)):
+        if i == len(list) - 1:
+            print('and ' + list[i])
+        else:
+            print(list[i] + ', ',end='')
+
+spam = ['apples', 'bananas', 'tofu', 'cats']
+bacon = []
+
+listToString(spam)
+listToString(bacon)

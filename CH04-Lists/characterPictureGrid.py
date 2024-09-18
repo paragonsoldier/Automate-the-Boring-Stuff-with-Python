@@ -28,3 +28,18 @@ Then your program should print grid[0][1], then grid[1][1], then grid[2][1], and
 The last thing your program will print is grid[8][5].
 Also, remember to pass the end keyword argument to print() if you don't want a newline printed automatically after each print() call.
 '''
+
+grid = [['.', '.', '.', '.', '.', '.'],
+        ['.', 'O', 'O', '.', '.', '.'],
+        ['O', 'O', 'O', 'O', '.', '.'],
+        ['O', 'O', 'O', 'O', 'O', '.'],
+        ['.', 'O', 'O', 'O', 'O', 'O'],
+        ['O', 'O', 'O', 'O', 'O', '.'],
+        ['O', 'O', 'O', 'O', '.', '.'],
+        ['.', 'O', 'O', '.', '.', '.'],
+        ['.', '.', '.', '.', '.', '.']]
+
+for i in range(len(grid[0])):
+    for j in range(len(grid)):
+        print(grid[j][i],end='')
+    print('')
